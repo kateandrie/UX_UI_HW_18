@@ -28,7 +28,10 @@
     </header>
 
     <section id="home">
-        <p>CRAFTING AESTHETIC AND FUNCTIONAL DESIGNS</p>
+        <p class="fade-text">CRAFTING AESTHETIC AND FUNCTIONAL DESIGNS</p>
+        
+            <p1>"Simplicity is the ultimate sophistication." – Leonardo da Vinci</p1>
+        </section>
     </section>
 
     <section id="about">
@@ -76,6 +79,28 @@
         </div>
     </section>
 
+    <section id="tools">
+        <h1>My Tools</h1>
+        <div class="tools-container">
+            <div class="tool">
+                <img src="./images/figma.256x256.png" alt="Figma">
+                <h4>Figma</h4>
+            </div>
+            <div class="tool">
+                <img src="./images/architect.256x175.png" alt="Sketch">
+                <h5>Sketch</h5>
+            </div>
+            <div class="tool">
+                <img src="./images/canva.256x256.png" alt="Canva">
+                <h4>Canva</h4>
+            </div>
+            <div class="tool">
+                <img src="./images/miro.255x256.png" alt="Miro">
+                <h4>Miro</h4>
+            </div>
+        </div>
+    </section>
+
     <section id="work">
         <h1>My Work</h1>
         <div class="work-container">
@@ -100,7 +125,7 @@
             <div class="work-item">
                 <img src="./images/CWF.png" alt="Project 3">
                 <div class="work-description">
-                    <h4>Colorado Wildlife Redesign</h4>
+                    <h5>Colorado Wildlife Redesign</h5>
                     <p>Non profit website project.</p>
                     <button class="view-project-button">View Project</button>
 
@@ -128,22 +153,6 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById('reveal-email').addEventListener('click', function() {
-            var emailElement = document.getElementById('email');
-            
-            if (emailElement.style.display === 'none') {
-                emailElement.style.display = 'block'; 
-                setTimeout(function() {
-                    emailElement.classList.add('show'); 
-                }, 10); 
-            } else {
-                emailElement.classList.remove('show'); 
-                setTimeout(function() {
-                    emailElement.style.display = 'none'; 
-                }, 500); 
-            }
-        });
-    </script>
+    <script src="./index.js"></script>
 </body>
 </html>

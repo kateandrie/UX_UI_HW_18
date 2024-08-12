@@ -94,6 +94,51 @@ section {
     color: #393434;
 }
 
+@keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+  
+  .fade-text {
+    animation: fadeInOut 4s ease-in-out infinite;
+  }
+  
+  
+  .fade-text {
+    animation: fadeInOut 3s ease-in-out infinite;
+  }
+  
+
+#home p1 {
+
+    text-align:left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    color: #393434;
+}
+
 #about {
     text-align: center;
 }
@@ -122,6 +167,19 @@ section {
     max-width: 600px;
 }
 
+.section {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skills Section */
+
 .skills-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -129,7 +187,7 @@ section {
     max-width: 800px; 
     margin: 0 auto;
     text-align: center;
-    padding: 20px; 
+    padding: 0 auto; 
     
 }
 
@@ -150,6 +208,61 @@ section {
 .skill p {
     font-size: 16px;
 }
+
+/* Tools Section */
+#tools {
+    text-align: center;
+    padding: 0px 20px;
+    margin-top: -20px;
+}
+
+#tools h1 {
+    margin-bottom: 40px;
+}
+
+.tools-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tool {
+    background: #fefefe55;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 150px;
+}
+
+.tool img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.tool h4 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.tool h5 {
+    font-size: 18px;
+    margin: 0;
+    padding-top: 22px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .tools-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 
 .work-container {
     display: flex;
@@ -266,6 +379,7 @@ footer .social-media a img {
 #work{
     text-align: center; 
     margin-bottom: 40px;  
+    margin-top: 40px;
 }
 
 #skills h1 {
@@ -273,4 +387,9 @@ footer .social-media a img {
 }
 #work h1 {
     text-align: center; 
+}
+
+#work h5 {
+    text-align: center; 
+    padding-top: 18px;
 }
